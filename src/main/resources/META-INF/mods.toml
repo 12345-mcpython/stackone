@@ -1,0 +1,40 @@
+
+modLoader="javafml"
+
+loaderVersion="[36,)"
+license="Apache Licence 2.0"
+
+[[mods]]
+
+modId="stackone"
+
+version="${file.jarVersion}"
+
+displayName="Stackone Mod"
+credits="Forge and Minecraft"
+
+authors="Laosun"
+
+description='''
+Each object can only be stacked once
+'''
+
+[[dependencies.stackone]]
+
+    modId="forge"
+
+    mandatory=true
+
+    versionRange="[36,)" #
+
+    ordering="NONE"
+
+    side="BOTH"
+
+[[dependencies.stackone]]
+    modId="minecraft"
+    mandatory=true
+
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
