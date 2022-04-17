@@ -26,7 +26,6 @@ public class StackOneMod {
             try {
                 Item item = Item.byId(i);
                 Item air = Item.byId(0);
-                // If id not found, item returns air.
                 if (item.equals(air)) {
                     break;
                 }
