@@ -1,6 +1,7 @@
 package com.example.examplemod;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -27,7 +28,16 @@ public class ExampleMod
     public void init(FMLInitializationEvent event)
     {
         // some example code
-        logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-        Item.getItemById(100000000);
+        for(int i = 1; ; i++){
+            Item item = Item.getItemById(i);
+            if(item == null){
+                continue;
+            }
+            if(item.equals(Items.RECORD_WAIT)){
+                Items.RECORD_WAIT.setMaxStackSize(1);
+                break;
+            }
+            item.setMaxStackSize(1);
+        }
     }
 }
