@@ -1,2 +1,4 @@
 # stackone
-A minecraft mod
+A minecraft mod.
+
+You can't stack anything.
