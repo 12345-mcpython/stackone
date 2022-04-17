@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "stackone",
+  "name": "Stack One Mod",
+  "description": "You can't stack",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Lao Sun"],
+  "credits": "Forge and Minecraft",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
