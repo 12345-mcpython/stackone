@@ -1,0 +1,16 @@
+[
+{
+  "modid": "stackone",
+  "name": "Stack One Mod",
+  "description": "You can't stack",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Lao Sun"],
+  "credits": "Forge and Minecraft",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
