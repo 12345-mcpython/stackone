@@ -32,7 +32,12 @@ public class StackOneMod {
                 }
                 LOGGER.debug(item.getRegistryName());
                 Class<? extends Item> a = Item.class;
-                Field f2 = a.getDeclaredField("maxStackSize");
+                Field f2;
+                try {
+                    f2 = a.getDeclaredField("maxStackSize");
+                }catch (NoSuchFieldException e){
+                    f2 = a.getDeclaredField("field_77777_bU");
+                }
                 f2.setAccessible(true);
                 f2.set(item, 1);
             } catch (Exception e) {
