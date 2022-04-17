@@ -1,2 +1,0 @@
-# stackone
-A minecraft mod
