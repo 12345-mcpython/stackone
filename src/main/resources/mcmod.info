@@ -2,7 +2,7 @@
 {
   "modid": "stackone",
   "name": "Stack One Mod",
-  "description": "You can't stack",
+  "description": "You can't stack anything!!!",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
