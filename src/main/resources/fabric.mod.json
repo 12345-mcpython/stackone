@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "stackone",
-  "version": "1.12.2-1.0.0",
+  "version": "1.17.1-fabric-1.0.0",
 
   "name": "Stack One Mod",
   "description": "You can't stack anything!!!",
