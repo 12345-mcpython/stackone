@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5ee00c-986f-467f-8122-809ea3217442" name="Changes" comment="Update .gitignore from empty.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -83,7 +84,7 @@
       <recent name="E:\code\java\test\src\main\resources\assets\minecraft\recipes" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.test [runClient]">
+  <component name="RunManager" selected="Gradle.test [build]">
     <configuration name="test [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -134,8 +135,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.test [runClient]" />
         <item itemvalue="Gradle.test [build]" />
+        <item itemvalue="Gradle.test [runClient]" />
       </list>
     </recent_temporary>
   </component>
