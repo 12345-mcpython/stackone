@@ -27,7 +27,7 @@ displayName="Stack One Mod" #mandatory
 # A text field displayed in the mod UI
 credits="Forge and Minecraft" #optional
 # A text field displayed in the mod UI
-authors="Lao Sun " #optional
+authors="Lao Sun" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 You can't stack anything!!!
