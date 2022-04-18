@@ -13,6 +13,7 @@ version="${file.jarVersion}"
 displayName="Stackone Mod"
 credits="Forge and Minecraft"
 
+logoFile="logo.png"
 authors="Laosun"
 
 description='''
