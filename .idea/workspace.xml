@@ -65,7 +65,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="27GpBRV2FON93sm2M8fzJKv7t6K" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -75,7 +75,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/enderio" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
@@ -129,6 +129,8 @@
     <list>
       <item itemvalue="Gradle.test [build]" />
       <item itemvalue="Gradle.test [runClient]" />
+      <item itemvalue="应用程序.Minecraft Client" />
+      <item itemvalue="应用程序.Minecraft Server" />
     </list>
     <recent_temporary>
       <list>
