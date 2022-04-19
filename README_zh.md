@@ -19,4 +19,3 @@
 1. 当你对合成结果按shift时，堆叠限制不会生效
 2. ![2](https://user-images.githubusercontent.com/63326494/163699044-4375f070-8b36-4064-b4ea-de645fb1d508.gif)
 3. 与EnderIO不兼容
-4. 与匠魂与地幔的部分版本不兼容
