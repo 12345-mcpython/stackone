@@ -1,6 +1,6 @@
 modLoader="javafml"
 
-loaderVersion="[36,)"
+loaderVersion="[31,)"
 license="Apache Licence 2.0"
 
 [[mods]]
@@ -25,7 +25,7 @@ modId="forge"
 
 mandatory=true
 
-versionRange="[36,)" #
+versionRange="[31,)" #
 
 ordering="NONE"
 
