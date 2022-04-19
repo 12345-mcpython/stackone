@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "stackone",
-  "version": "1.17.1-fabric-1.0.0",
+  "version": "1.14.4-fabric-1.0.0",
 
   "name": "Stack One Mod",
   "description": "You can't stack anything!!!",
   "authors": [
-    "Me!"
+    "Lao Sun"
   ],
   "contact": {
     "sources": "https://github.com/12345-mcpython/stackone"
@@ -23,8 +23,8 @@
   },
   "depends": {
     "fabricloader": ">=0.13.3",
-    "minecraft": "1.17.x",
-    "java": ">=17"
+    "minecraft": "1.14.x",
+    "java": ">=8"
   },
   "suggests": {
     "another-mod": "*"
