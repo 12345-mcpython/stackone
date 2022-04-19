@@ -18,4 +18,4 @@ You can't stack anything.
 ## bugs
 1. When you press shift on the result, "the stack restriction" will not take effect.
 2. ![2](https://user-images.githubusercontent.com/63326494/163699044-4375f070-8b36-4064-b4ea-de645fb1d508.gif)
-
+3. Not compatible with EnderIO
