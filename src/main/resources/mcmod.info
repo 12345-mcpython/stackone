@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["Lao Sun"],
   "credits": "Forge and Minecraft",
-  "logoFile": "",
+  "logoFile": "logo.png",
   "screenshots": [],
   "dependencies": []
 }
