@@ -38,7 +38,7 @@ public class StackOneMod {
                 try {
                     f2 = a.getDeclaredField("maxStackSize");
                 } catch (NoSuchFieldException e) {
-                    f2 = a.getDeclaredField("f_41370_ ");
+                    f2 = a.getDeclaredField("f_41370_");
                 }
                 f2.setAccessible(true);
                 f2.set(i, 1);
