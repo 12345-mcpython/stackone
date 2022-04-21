@@ -1,5 +1,7 @@
-# stackone
-
+<h1 align="center">
+	<a href="https://github.com/Creators-of-Create/Create/blob/master/LICENSE"><img src="https://img.shields.io/github/license/12345-mcpython/stackone?style=flat&color=900c3f"></a>
+	<a href="https://www.curseforge.com/minecraft/mc-mods/stackone-mod"><img src="http://cf.way2muchnoise.eu/615081.svg"></a><br><br>
+</h1>
 ## language
 [中文](README_zh.md)
 [English](README.md)
