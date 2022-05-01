@@ -8,7 +8,7 @@ license="Apache Licence 2.0"
 
 modId="stackone"
 
-version="${file.jarVersion}"
+version="1.16.5-1.0.1"
 
 displayName="Stackone Mod"
 credits="Forge and Minecraft"
