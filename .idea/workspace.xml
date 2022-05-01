@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd5ee00c-986f-467f-8122-809ea3217442" name="Changes" comment="Update .gitignore from empty." />
+    <list default="true" id="fd5ee00c-986f-467f-8122-809ea3217442" name="Changes" comment="Remove StackModEvent.java">
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laosun/stackone/StackOneMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laosun/stackone/StackOneMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mcmod.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650154857444</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Remove StackModEvent.java">
+      <created>1651396993969</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651396993969</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +200,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Init code from old code" />
     <MESSAGE value="Init 1.12.2 code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Init 1.12.2 code." />
+    <MESSAGE value="Remove StackModEvent.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove StackModEvent.java" />
   </component>
 </project>
