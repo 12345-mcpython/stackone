@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "stackone",
-  "version": "1.14.4-fabric-1.0.0",
+  "version": "1.14.4-fabric-1.0.1",
 
   "name": "Stack One Mod",
   "description": "You can't stack anything!!!",
@@ -22,7 +22,6 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.13.3",
     "minecraft": "1.14.x",
     "java": ">=8"
   },
