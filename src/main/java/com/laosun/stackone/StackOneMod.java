@@ -24,7 +24,7 @@ public class StackOneMod {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
-        MinecraftForge.EVENT_BUS.register(StackOneEvent.class);
+        // MinecraftForge.EVENT_BUS.register(StackOneEvent.class);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
