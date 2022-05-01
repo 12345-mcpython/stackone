@@ -23,7 +23,7 @@ public class StackOneMod {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        MinecraftForge.EVENT_BUS.register(StackModEvent.class);
+        // MinecraftForge.EVENT_BUS.register(StackModEvent.class);
         for(Item item : GetItems.create()){
             item.setMaxStackSize(1);
         }
