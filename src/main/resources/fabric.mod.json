@@ -22,8 +22,7 @@
     ]
   },
   "depends": {
-    "minecraft": "1.14.x",
-    "java": ">=8"
+    "minecraft": "1.14.x"
   },
   "suggests": {
     "another-mod": "*"
