@@ -1,11 +1,11 @@
 package com.laosun.stackone;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = StackOneMod.MODID, name = StackOneMod.NAME, version = StackOneMod.VERSION)
@@ -23,9 +23,9 @@ public class StackOneMod {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        // MinecraftForge.EVENT_BUS.register(StackModEvent.class);
-        for(Item item : GetItems.create()){
+        for(Item item : ForgeRegistries.ITEMS){
             item.setMaxStackSize(1);
         }
+
     }
 }
