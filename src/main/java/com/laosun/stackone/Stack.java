@@ -8,19 +8,22 @@ import com.google.gson.JsonParser;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.laosun.stackone.StackOneMod.LOGGER;
 
-public class IgnoreItem {
+public class Stack {
     public String item;
+    public short max_stack_size;
 
-    public static ArrayList<String> getIgnoreItems() {
+    public static Map<String, Short> getStackList() {
+        Map<String, Short> map = new HashMap<>();
         File dir = new File("config/stackone");
         if (!dir.exists()) {
             dir.mkdirs();
         }
-        File file = new File(dir, "ignore_item.json");
+        File file = new File(dir, "max_stack_size.json");
         if (!file.isFile()) {
             try {
                 if (!file.createNewFile()) {
@@ -42,13 +45,12 @@ public class IgnoreItem {
         }
         Gson gson = new Gson();
         JsonArray jsonArray;
-        ArrayList<String> ignoreItems = new ArrayList<>();
         try {
             if (a1 != null) {
                 jsonArray = JsonParser.parseString(String.copyValueOf(a1)).getAsJsonArray();
                 for (JsonElement user : jsonArray) {
-                    IgnoreItem ignore = gson.fromJson(user, IgnoreItem.class);
-                    ignoreItems.add(ignore.item);
+                    Stack ignore = gson.fromJson(user, Stack.class);
+                    map.put(ignore.item, ignore.max_stack_size);
                 }
             }
 
@@ -56,6 +58,6 @@ public class IgnoreItem {
             LOGGER.error("Json has syntax error!");
             e.printStackTrace();
         }
-        return ignoreItems;
+        return map;
     }
 }

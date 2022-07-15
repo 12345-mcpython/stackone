@@ -1,9 +1,5 @@
 package com.laosun.stackone;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,9 +9,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
@@ -24,7 +17,7 @@ public class StackOneMod {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "stackone";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
     public StackOneMod() {
@@ -34,57 +27,23 @@ public class StackOneMod {
         modEventBus.addListener(this::commonSetup);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-        File dir = new File("config/stackone");
-        if (!dir.exists()) {
-            dir.mkdirs();
-        }
-        File file = new File(dir, "ignore_item.json");
-        if (!file.isFile()) {
-            try {
-                if (!file.createNewFile()) {
-                    LOGGER.error("Fail to create file!");
-                }
-            } catch (IOException e) {
-                LOGGER.error("Fail to create file!");
-                e.printStackTrace();
+    public boolean isItem(ArrayList<String> descriptionId, Item item) {
+        boolean is = false;
+        for (String i : descriptionId) {
+            if (i.equals(item.getDescriptionId())) {
+                is = true;
+                break;
             }
         }
-        char[] a1 = null;
-        try {
-            FileReader fileReader = new FileReader(file);
-            a1 = new char[(int) file.length()];
-            fileReader.read(a1);
-        } catch (IOException e) {
-            LOGGER.error("Fail to open file!");
-            e.printStackTrace();
-        }
-        Gson gson = new Gson();
-        JsonArray jsonArray;
-        ArrayList<String> ignoreItems = new ArrayList<>();
-        try {
-            if (a1 != null) {
-                jsonArray = JsonParser.parseString(String.copyValueOf(a1)).getAsJsonArray();
-                for (JsonElement user : jsonArray) {
-                    IgnoreItem ignore = gson.fromJson(user, IgnoreItem.class);
-                    ignoreItems.add(ignore.item);
-                }
-            }
+        return is;
+    }
 
-        } catch (Exception e) {
-            LOGGER.error("Json has syntax error!");
-            e.printStackTrace();
-        }
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        ArrayList<String> ignoreItems = IgnoreItem.getIgnoreItems();
         for (Item i : ForgeRegistries.ITEMS) {
             Field a;
-            boolean is = false;
-            for (String j : ignoreItems) {
-                if (j.equals(i.getDescriptionId())) {
-                    is = true;
-                    break;
-                }
-            }
-            if (is) {
+            if (isItem(ignoreItems, i)) {
                 continue;
             }
             try {
@@ -99,6 +58,7 @@ public class StackOneMod {
             }
             a.setAccessible(true);
             try {
+
                 a.set(i, 1);
             } catch (IllegalAccessException e) {
                 LOGGER.error("Failed to set field!!!");
