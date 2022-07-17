@@ -14,16 +14,12 @@ import java.util.ArrayList;
 
 @Mod(StackOneMod.MODID)
 public class StackOneMod {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "stackone";
-    // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
     public StackOneMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
     }
 
