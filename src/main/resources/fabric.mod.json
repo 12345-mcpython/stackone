@@ -21,9 +21,6 @@
       "com.laosun.stackone.StackOneMod"
     ]
   },
-  "depends": {
-    "minecraft": "1.18.x"
-  },
   "suggests": {
     "another-mod": "*"
   }
