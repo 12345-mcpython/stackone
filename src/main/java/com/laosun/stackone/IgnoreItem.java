@@ -37,7 +37,6 @@ public class IgnoreItem {
             fileReader.read(a1);
         } catch (IOException e) {
             LOGGER.error("Fail to open file!");
-            LOGGER.error(Arrays.toString(e.getStackTrace()));
         }
 
         Gson gson = new Gson();
@@ -53,8 +52,7 @@ public class IgnoreItem {
             }
 
         } catch (Exception e) {
-            LOGGER.error("Json has syntax error!");
-            LOGGER.error(Arrays.toString(e.getStackTrace()));
+            LOGGER.error("JSON has syntax error!");
         }
         return ignoreItems;
     }
