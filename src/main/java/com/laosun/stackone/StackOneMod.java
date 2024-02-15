@@ -23,25 +23,15 @@ public class StackOneMod {
         modEventBus.addListener(this::commonSetup);
     }
 
-    public boolean isItem(ArrayList<String> descriptionId, Item item) {
-        boolean is = false;
-        for (String i : descriptionId) {
-            if (i.equals(item.getDescriptionId())) {
-                is = true;
-                break;
-            }
-        }
-        return is;
-    }
-
-
+    @SuppressWarnings("deprecation")
     private void commonSetup(final FMLCommonSetupEvent event) {
         ArrayList<String> ignoreItems = IgnoreItem.getIgnoreItems();
         for (Item i : ForgeRegistries.ITEMS) {
-            Field a;
-            if (isItem(ignoreItems, i)) {
+            if (ignoreItems.contains(i.builtInRegistryHolder().key().toString())) {
                 continue;
             }
+            Field a;
+
             try {
                 a = Item.class.getDeclaredField("maxStackSize");
             } catch (NoSuchFieldException e) {
@@ -54,7 +44,6 @@ public class StackOneMod {
             }
             a.setAccessible(true);
             try {
-
                 a.set(i, 1);
             } catch (IllegalAccessException e) {
                 LOGGER.error("Failed to set field!!!");

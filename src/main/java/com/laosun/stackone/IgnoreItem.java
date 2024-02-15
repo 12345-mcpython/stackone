@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static com.laosun.stackone.StackOneMod.LOGGER;
 
@@ -28,18 +29,17 @@ public class IgnoreItem {
                 }
             } catch (IOException e) {
                 LOGGER.error("Fail to create file!");
-                e.printStackTrace();
             }
         }
         char[] a1 = null;
-        try {
-            FileReader fileReader = new FileReader(file);
+        try (FileReader fileReader = new FileReader(file);) {
             a1 = new char[(int) file.length()];
             fileReader.read(a1);
         } catch (IOException e) {
             LOGGER.error("Fail to open file!");
-            e.printStackTrace();
+            LOGGER.error(Arrays.toString(e.getStackTrace()));
         }
+
         Gson gson = new Gson();
         JsonArray jsonArray;
         ArrayList<String> ignoreItems = new ArrayList<>();
@@ -54,7 +54,7 @@ public class IgnoreItem {
 
         } catch (Exception e) {
             LOGGER.error("Json has syntax error!");
-            e.printStackTrace();
+            LOGGER.error(Arrays.toString(e.getStackTrace()));
         }
         return ignoreItems;
     }
