@@ -25,10 +25,11 @@ public class IgnoreItem {
         if (!file.isFile()) {
             try {
                 if (!file.createNewFile()) {
-                    LOGGER.error("Fail to create file!");
+                    throw new IOException("Failed to create file!");
                 }
             } catch (IOException e) {
-                LOGGER.error("Fail to create file!");
+                LOGGER.error("Failed to create file!");
+                e.printStackTrace();
             }
         }
         char[] a1 = null;
@@ -36,7 +37,8 @@ public class IgnoreItem {
             a1 = new char[(int) file.length()];
             fileReader.read(a1);
         } catch (IOException e) {
-            LOGGER.error("Fail to open file!");
+            LOGGER.error("Failed to open file!");
+            e.printStackTrace();
         }
 
         Gson gson = new Gson();
@@ -52,7 +54,8 @@ public class IgnoreItem {
             }
 
         } catch (Exception e) {
-            LOGGER.error("JSON has syntax error!");
+            LOGGER.error("Failed to read JSON file!");
+            e.printStackTrace();
         }
         return ignoreItems;
     }

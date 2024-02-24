@@ -27,7 +27,7 @@ public class StackOneMod {
     private void commonSetup(final FMLCommonSetupEvent event) {
         ArrayList<String> ignoreItems = IgnoreItem.getIgnoreItems();
         for (Item i : ForgeRegistries.ITEMS) {
-            if (ignoreItems.contains(i.builtInRegistryHolder().key().toString())) {
+            if (ignoreItems.contains(i.builtInRegistryHolder().key().location().toString())) {
                 continue;
             }
             Field a;
